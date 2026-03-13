@@ -1,20 +1,17 @@
 {
-  "name": "@nakraniprakash/slack-logger-node",
+  "name": "@prakashnakrani/slack-logger-node",
   "version": "1.0.0",
   "description": "Slack error logger for Node.js / Express backends",
   "main": "src/index.js",
   "files": [
     "src"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nakraniprakash/slack-logger.git"
   },
   "dependencies": {
-    "@nakraniprakash/slack-logger-core": "*"
+    "@prakashnakrani/slack-logger-core": "*"
   },
   "license": "MIT"
 }

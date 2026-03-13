@@ -29,14 +29,14 @@
  */
 
 const React = require('react');
-const core  = require('@nakraniprakash/slack-logger-core');
+const core  = require('@prakashnakrani/slack-logger-core');
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 /**
  * Initialise the logger. Call once at app root before rendering.
  * Also attaches global error handlers for uncaught errors.
- * @param {import('@nakraniprakash/slack-logger-core').SlackLoggerConfig} config
+ * @param {import('@prakashnakrani/slack-logger-core').SlackLoggerConfig} config
  */
 function initLogger(config) {
   core.init(config);
@@ -57,7 +57,7 @@ const logger = {
   /**
    * @param {string} message
    * @param {Error|null} [error]
-   * @param {import('@nakraniprakash/slack-logger-core').LogContext} [context]
+   * @param {import('@prakashnakrani/slack-logger-core').LogContext} [context]
    */
   error: (message, error = null, context = {}) => core.log('error', message, error, context),
   warn:  (message, error = null, context = {}) => core.log('warn',  message, error, context),
@@ -200,7 +200,7 @@ class SlackErrorBoundary extends React.Component {
  * })
  *
  * @param {React.ComponentType} AppComponent
- * @param {import('@nakraniprakash/slack-logger-core').SlackLoggerConfig} config
+ * @param {import('@prakashnakrani/slack-logger-core').SlackLoggerConfig} config
  */
 function withSlackLogger(AppComponent, config) {
   // Init once

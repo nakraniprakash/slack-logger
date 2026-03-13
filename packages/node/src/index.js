@@ -28,13 +28,13 @@
 
 'use strict';
 
-const core = require('@nakraniprakash/slack-logger-core');
+const core = require('@prakashnakrani/slack-logger-core');
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 
 /**
  * Initialise the logger. Call once at app startup before any routes.
- * @param {import('@nakraniprakash/slack-logger-core').SlackLoggerConfig} config
+ * @param {import('@prakashnakrani/slack-logger-core').SlackLoggerConfig} config
  */
 function initLogger(config) {
   core.init(config);
@@ -55,7 +55,7 @@ const logger = {
   /**
    * @param {string} message
    * @param {Error|null} [error]
-   * @param {import('@nakraniprakash/slack-logger-core').LogContext} [context]
+   * @param {import('@prakashnakrani/slack-logger-core').LogContext} [context]
    */
   error: (message, error = null, context = {}) => core.log('error', message, error, context),
   warn:  (message, error = null, context = {}) => core.log('warn',  message, error, context),

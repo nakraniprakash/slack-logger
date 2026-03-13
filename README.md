@@ -6,10 +6,10 @@ Modular Slack error logging for Node.js, React, Next.js and React Native.
 
 | Package | Use for |
 |---|---|
-| `@nakraniprakash/slack-logger-node` | Node.js / Express backends |
-| `@nakraniprakash/slack-logger-react` | React, Next.js, React Native |
+| `@prakashnakrani/slack-logger-node` | Node.js / Express backends |
+| `@prakashnakrani/slack-logger-react` | React, Next.js, React Native |
 
-> `@nakraniprakash/slack-logger-core` is an internal dependency — never install directly.
+> `@prakashnakrani/slack-logger-core` is an internal dependency — never install directly.
 
 ---
 
@@ -17,16 +17,13 @@ Modular Slack error logging for Node.js, React, Next.js and React Native.
 
 ```bash
 # Backend
-npm install @nakraniprakash/slack-logger-node
+npm install @prakashnakrani/slack-logger-node
 
 # Frontend
-npm install @nakraniprakash/slack-logger-react
+npm install @prakashnakrani/slack-logger-react
 ```
 
-Add to `.npmrc` in your project:
-```
-@nakraniprakash:registry=https://npm.pkg.github.com
-```
+No extra `.npmrc` config needed — packages are on the public npm registry.
 
 ---
 
@@ -38,7 +35,7 @@ const {
   logger,
   errorMiddleware,
   attachProcessHandlers,
-} = require('@nakraniprakash/slack-logger-node')
+} = require('@prakashnakrani/slack-logger-node')
 
 // 1. Init once at app startup
 initLogger({
@@ -69,7 +66,7 @@ logger.info('User signed up', null, { userEmail: 'foo@bar.com' })
 ## Frontend usage (React / Next.js)
 
 ```jsx
-import { initLogger, logger, SlackErrorBoundary } from '@nakraniprakash/slack-logger-react'
+import { initLogger, logger, SlackErrorBoundary } from '@prakashnakrani/slack-logger-react'
 
 // 1. Init once at app root
 initLogger({
@@ -105,7 +102,7 @@ logger.error('Payment failed', err, { channel: 'payments' })
 
 ```jsx
 // pages/_app.jsx
-import { withSlackLogger } from '@nakraniprakash/slack-logger-react'
+import { withSlackLogger } from '@prakashnakrani/slack-logger-react'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
@@ -129,7 +126,7 @@ Same as React — `initLogger` auto-detects React Native and uses `ErrorUtils.se
 
 ```js
 // App.js
-import { initLogger, SlackErrorBoundary } from '@nakraniprakash/slack-logger-react'
+import { initLogger, SlackErrorBoundary } from '@prakashnakrani/slack-logger-react'
 
 initLogger({
   project: 'networth-tracker-mobile',
