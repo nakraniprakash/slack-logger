@@ -1,0 +1,17 @@
+{
+  "name": "@nakraniprakash/slack-logger-core",
+  "version": "1.0.0",
+  "description": "Shared core logic for slack-logger packages",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nakraniprakash/slack-logger.git"
+  },
+  "license": "MIT"
+}

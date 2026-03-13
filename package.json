@@ -1,0 +1,11 @@
+{
+  "name": "slack-logger-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "publish:all": "npm publish --workspaces --if-present"
+  }
+}
